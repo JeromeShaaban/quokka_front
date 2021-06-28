@@ -15,8 +15,9 @@ $shadows-big:    multiple-box-shadow(100);
 .bkg{
   height: 100vh;
   width: 100%;
-  background: radial-gradient(ellipse at bottom left, #2a3b4e 0%, #090A0F 100%);
+  background: radial-gradient(ellipse at bottom left, #482755 0%, #1d2d41 50%, #090b0f 100%);
   overflow: hidden;
+  position: absolute;
 }
     
 #stars{
