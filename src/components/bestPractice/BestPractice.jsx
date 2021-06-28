@@ -17,7 +17,8 @@ export default function BestPractice () {
         [
              {   image: Posture1,
                  title: "Wrong sitting position",
-                 text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                 text: "Don't poke or jut your chin forward, nor hunch your shoulders. Avoid sitting with your spine in a 'C' shape (this puts your back under strain). Avoid sitting with your knees higher than your hips (spine becomes 'C' shaped, knees can easily fall to one side leading to a twisted pelvis), or lower than your hips (bottom slips forward on the seat and knees knock together)."
+
              },
              {  
                  image: Posture2,
@@ -27,7 +28,7 @@ export default function BestPractice () {
              {  
                 image: Posture3,
                 title: "Correct standing position",
-                text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum comes from a line in section 1.10.32."
+                text: "When using a standing workstation, keep your head, neck, torso and legs approximately in line and vertical. Choose a desk deep enough to allow your monitor to fit directly in front of you and at least 20 inches (51 centimeters) away. The desk should allow you to keep your wrists straight and your hands at or slightly below the level of your elbows. The top of the screen should be at or slightly below eye level."
             }    
         ]
     
