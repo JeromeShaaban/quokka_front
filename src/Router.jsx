@@ -13,7 +13,6 @@ export default function QuokkaRouter() {
         <Route path="/pomodoro_music" component={PomodoroMusic} />
         <Route exact path="/" component={BackgroundStars} />
       </Zen>
-      <Footer />
     </Router>
   );
 }
