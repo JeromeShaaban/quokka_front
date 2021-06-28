@@ -6,11 +6,11 @@ const YoutubeVideo = ({ embedId }) => (
     <iframe
       width="853"
       height="480"
-      src={`https://www.youtube.com/embed/${embedId}`}
+      src={`https://www.youtube.com/embed/${embedId}&index=4`}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
       frameBorder="0"
-      title="Embedded youtube"
+      title="Relaxation music"
     ></iframe>
   </div>
 );
