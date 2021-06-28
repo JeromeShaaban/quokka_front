@@ -1,5 +1,11 @@
+import styled from 'styled-components';
 import Card from './Card';
+import BackgroundStars from '../BackgroundStars';
 
+
+export const RecipeWrapper = styled.div`
+display:flex;
+`;
 
 export default function Recipe(){
 
@@ -23,7 +29,8 @@ export default function Recipe(){
     ]
 
     return(
-        <div>
+        <RecipeWrapper>
+            <BackgroundStars/>
             <h1>blablabla</h1>
             <div>
         {recipes.map((recipe) => {
@@ -32,6 +39,7 @@ export default function Recipe(){
         )})}
         </div>
         <p>gnagnagna</p>
-        </div>
+        </RecipeWrapper>
+
     )
 }
