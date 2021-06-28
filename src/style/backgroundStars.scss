@@ -14,7 +14,8 @@ $shadows-big:    multiple-box-shadow(100);
   width: 100%;
   background: radial-gradient(ellipse at bottom left, #482755 0%, #1d2d41 50%, #090b0f 100%);
   overflow: hidden;
-  position: absolute;
+  position: fixed;
+  z-index: -5000;
 }
     
 #stars{
