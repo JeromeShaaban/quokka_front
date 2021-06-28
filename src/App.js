@@ -1,13 +1,12 @@
-import logo from './logo.svg';
+import React from "react";
+import QuokkaRouter from "./Router";
 import './App.css';
 import BackgroundStars from './components/BackgroundStars';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <BackgroundStars/>
-      </header>
+      <QuokkaRouter />
     </div>
   );
 }
