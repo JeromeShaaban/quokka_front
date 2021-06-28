@@ -3,7 +3,7 @@ import {
   Switch as Zen,
   Route,
 } from "react-router-dom";
-import BackgroundStars from "./components/BackgroundStars";
+import Home from "./components/Home";
 import PomodoroMusic from "./components/PomodoroMusic";
 
 export default function QuokkaRouter() {
@@ -11,7 +11,7 @@ export default function QuokkaRouter() {
     <Router>
       <Zen>
         <Route path="/pomodoro_music" component={PomodoroMusic} />
-        <Route exact path="/" component={BackgroundStars} />
+        <Route exact path="/" component={Home} />
       </Zen>
     </Router>
   );
