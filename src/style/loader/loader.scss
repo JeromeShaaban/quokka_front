@@ -1,0 +1,87 @@
+$beverage-color: hsl(0, 28%, 31%);
+$beverage-color-dark: hsl(0, 23%, 39%);
+$unfill-duration: 25s;
+
+.container{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scale(.5, .6);
+}
+
+  .water{
+      width:600px;
+      height: 600px;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+      overflow: hidden;
+      position: absolute;
+      mask: url('../../assets/mask.png')
+  }
+  .water:before, .water:after{
+      content:'';
+      position: absolute;
+      width:1200px;
+      height: 1200px;
+      right: -0px;
+    }
+    .water:before{
+      right: 0px;
+      background-color: $beverage-color;
+      animation:unfillBefore $unfill-duration linear forwards ;
+      
+    }
+    .water:after{
+      right: -500px;
+      border: 200px solid;
+      border-radius: 42%;
+      border-color:$beverage-color-dark ;
+      animation:wave 10s linear infinite, 
+      unfillAfter $unfill-duration linear forwards
+  }
+  @keyframes wave{
+      0%{
+          transform: rotate(0);
+      }
+      100%{
+          transform: rotate(360deg);
+      }
+  }
+  #maskHover{
+    position: relative;
+    right: 0;
+    width:600px;
+    height: 600px;
+    filter: brightness(.7)
+  }
+  
+  #vapor{
+    position: relative;
+    height: 300px;
+    filter: brightness(.7);
+    padding:0
+  }
+
+  @keyframes unfillAfter{
+    0%{
+      bottom: 400px;
+    }
+    100%{
+      bottom: -120px;
+    }
+  }
+
+  @keyframes unfillBefore{
+    0%{
+      top: 100px;
+    }
+    100%{
+      top: 650px;
+    }
+  }
+
+  @keyframes animBubble{
+    from{	
+      transform: translateY(1000px)}
+      
+    to		{
+      transform: translateY(-2000px)}}
