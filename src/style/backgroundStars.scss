@@ -1,6 +1,3 @@
-// @import "compass/functions";  
-
-
 @function multiple-box-shadow ($n) {
   $value: '#{random(2000)}px #{random(2000)}px #FFF';
   @for $i from 2 through $n{
