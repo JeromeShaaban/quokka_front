@@ -13,8 +13,8 @@ import { useHistory } from "react-router-dom";
     history.push("/");
   }
   return (
-    <>
+    <div className="header">
     <img className="header-img" alt="header" onClick={(e) =>handleClick(e)} src={icon}></img>
-    </>
+    </div>
   )
 }
