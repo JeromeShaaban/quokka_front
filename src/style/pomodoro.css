@@ -5,5 +5,5 @@
   color: white;
   font-family: 'Permanent Marker', cursive;
   font-size: 2.5rem;
-  width: 100%;
+  max-width: 500px;
 }
