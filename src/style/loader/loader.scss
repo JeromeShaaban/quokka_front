@@ -1,21 +1,46 @@
 $beverage-color: hsl(0, 28%, 31%);
 $beverage-color-dark: hsl(0, 23%, 39%);
-$unfill-duration: 25s;
+$unfill-duration: 10s;
 
-.container{
+.coffeeContainer{
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  height: 450px;
+  padding-top: 50px ;
+  width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  transform: scale(.5, .6);
+
+  .readyButton{
+    text-decoration: none;
+    margin-top: 10px;
+    width: 200px;
+    height: 100px;
+    z-index: 10;
+    background: none;
+    border: none;
+    border: 2px white solid;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: background-color .3s;
+    &:hover{
+      background: rgba($color: white, $alpha: .3);
+    }
+  }
 }
 
-  .water{
-      width:600px;
-      height: 600px;
-      background-color: rgba($color: #000000, $alpha: 0.1);
-      overflow: hidden;
-      position: absolute;
-      mask: url('../../assets/mask.png')
+.water{
+  width:600px;
+  height: 600px;
+  
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  overflow: hidden;
+  position: absolute;
+  mask: url('../../assets/mask.png');
   }
   .water:before, .water:after{
       content:'';
@@ -38,14 +63,7 @@ $unfill-duration: 25s;
       animation:wave 10s linear infinite, 
       unfillAfter $unfill-duration linear forwards
   }
-  @keyframes wave{
-      0%{
-          transform: rotate(0);
-      }
-      100%{
-          transform: rotate(360deg);
-      }
-  }
+
   #maskHover{
     position: relative;
     right: 0;
@@ -58,8 +76,24 @@ $unfill-duration: 25s;
     position: relative;
     height: 300px;
     filter: brightness(.7);
-    padding:0
   }
+
+  #coffee{
+    transform: scale(.5, .6);
+    padding-top: 200px ;
+    position: relative;
+    animation: fadeOn 1s, fadeOff 1s $unfill-duration ease-in-out forwards ;
+
+  }
+
+  #mill{
+    position: relative;
+    animation: fadeOn .5s ease-in-out forwards, blink 1s .5s infinite;
+    filter: brightness(.7);
+
+  }
+
+  
 
   @keyframes unfillAfter{
     0%{
@@ -79,9 +113,39 @@ $unfill-duration: 25s;
     }
   }
 
-  @keyframes animBubble{
-    from{	
-      transform: translateY(1000px)}
-      
-    to		{
-      transform: translateY(-2000px)}}
+  @keyframes fadeOff{
+    0%{	
+      opacity: 1;}
+    100%{
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeOn{
+    0%{	
+      opacity: 0;}
+    100%{
+      opacity: 1;
+    }
+  }
+
+  @keyframes wave{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink{
+  0%{	
+    opacity: 1;}
+    50%{
+      opacity: .5;
+    }
+    100%{
+      opacity: 1;
+    }
+}
+  
