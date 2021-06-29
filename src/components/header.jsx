@@ -6,6 +6,9 @@ import { useHistory } from "react-router-dom";
 
   function handleClick(e) {
     e.preventDefault()
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'})
 
     history.push("/");
   }

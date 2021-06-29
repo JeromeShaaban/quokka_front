@@ -6,14 +6,22 @@ import Posture3 from '../../assets/posture3.png'
 import Meditation1 from '../../assets/meditation1.jpg'
 import Meditation2 from '../../assets/meditation2.jpg'
 import Meditation3 from '../../assets/meditation3.jpg'
+import Hamstring from '../../assets/hamstring.gif'
+import Shoulder from '../../assets/shoulder.gif'
+import Lower from '../../assets/lower.gif'
+import {useContext} from 'react'
+import MenuContext from '../../contexts/MenuContext'
+import SlideMenu from '../../components/menu/Menu'
 
 export default function BestPractice () {
+    const { open } = useContext(MenuContext);
 
     const Straigthen = 
         [
              {   image: Posture1,
                  title: "Wrong sitting position",
-                 text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                 text: "Don't poke or jut your chin forward, nor hunch your shoulders. Avoid sitting with your spine in a 'C' shape (this puts your back under strain). Avoid sitting with your knees higher than your hips (spine becomes 'C' shaped, knees can easily fall to one side leading to a twisted pelvis), or lower than your hips (bottom slips forward on the seat and knees knock together)."
+
              },
              {  
                  image: Posture2,
@@ -23,7 +31,7 @@ export default function BestPractice () {
              {  
                 image: Posture3,
                 title: "Correct standing position",
-                text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum comes from a line in section 1.10.32."
+                text: "When using a standing workstation, keep your head, neck, torso and legs approximately in line and vertical. Choose a desk deep enough to allow your monitor to fit directly in front of you and at least 20 inches (51 centimeters) away. The desk should allow you to keep your wrists straight and your hands at or slightly below the level of your elbows. The top of the screen should be at or slightly below eye level."
             }    
         ]
     
@@ -47,24 +55,29 @@ export default function BestPractice () {
 
         const Stretch = 
         [
-             {   image: Posture1,
-                 title: "Wrong sitting position",
-                 text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+             {   image: Hamstring,
+                 title: "Hamstring stretches",
+                 text: "Raise your arm and bend it so that your hand reaches toward the opposite side. Use your other hand and pull the elbow toward your head. Hold for 10 to 30 seconds. Repeat on the other side."
              },
              {  
-                 image: Posture2,
-                 title: "Correct sitting position",
-                 text: "The first aspect to address is the workstation. Make sure the seat height is correct-it should allow elbows and wrists to be at 90 degrees, feet should be flat on the ground or a footstool. You should be looking directly at your screen with your eyes hitting the top third of your screen. When using your mouse keep your elbow as close to your body as you can."
+                 image: Shoulder,
+                 title: "Shoulder stretch",
+                 text: "Done standing or sitting. Stretch one arm across your body, holding with your opposite hand, and pulling toward your chest until you feel a nice stretch in your shoulder."
              },
              {  
-                image: Posture3,
-                title: "Correct standing position",
-                text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum comes from a line in section 1.10.32."
+                image: Lower,
+                title: "Lower back stretch",
+                text: "While sitting and keeping your back straight, bring one of your knees toward your chest. Using both hands, gently pull your thigh toward you. You should feel tension in your lower back and upper buttock."
             }    
         ]
 
     return(
         <div>
+           <SlideMenu />
+           {!open && (
+           
+           <div>
+           
         <h1 class="white">Straigthen up</h1>
         <div class="flexBest">
         {
@@ -104,6 +117,11 @@ export default function BestPractice () {
             })
         }
         </div>
+        </div>
+           
+           
+           )}
+        
     </div>
     )
   }

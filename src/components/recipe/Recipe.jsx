@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { useContext } from 'react';
+import MenuContext from '../../contexts/MenuContext';
 import Card from './Card';
-
+import SlideMenu from '../menu/Menu'
 
 export const RecipeWrapper = styled.div`
 display:flex;
@@ -23,7 +25,7 @@ font-size: 4rem;
 `;
 
 export default function Recipe(){
-
+    const { open } = useContext(MenuContext);
     const recipes = [
         {
            
@@ -62,16 +64,25 @@ export default function Recipe(){
         },
     ]
 
-    return(
+return(
         <div>
+            <SlideMenu/> 
+            {!open && (
+            <> 
+
             <TitleRecipePage>A healthy mind in a healthy body</TitleRecipePage>
             <RecipeWrapper>
         {recipes.map((recipe) => {
             return(
             <Card {...recipe}/>
-        )})}
-        </RecipeWrapper>
-        </div>
+            )
+        }
+     )
+    }
+    
+
+        </RecipeWrapper></>)} 
+    </div>
 
     )
 }
