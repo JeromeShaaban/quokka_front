@@ -28,7 +28,7 @@ const BoobaQuotes = () => {
     )
     :(
       <div className="BoobaDiv">
-        <blockquote className="BoobaQuote" style={{ width: "50%"}}>{quote}</blockquote>
+        <blockquote className="BoobaQuote">{quote}</blockquote>
         <button type="button" onClick={clickNewQuote} className="BoobaButton">
           Need more motivation ? 
         </button>
