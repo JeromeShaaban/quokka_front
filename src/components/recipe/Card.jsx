@@ -17,6 +17,7 @@ export const StepsRecipe = styled.p`
 export const RecipeTitle = styled.h2`
  font-size:25px;
  color:#fff;
+ padding:20px;
 `;
 
 export const IngredientsRecipe = styled.p`
@@ -36,20 +37,33 @@ background-color: #ffffff18;
 
 h4{
     color:#ffffffea;
-    font-size:1.4rem;
+    font-size:1.3rem;
+    padding:10px;
+}
+
+.isFavorite{
+  width: 40px;
+  height: 40px;
+  background-image: url("https://image.flaticon.com/icons/png/512/833/833472.png");
+  background-size: 100%;
+  margin-top: 40px;
+}
+
+.notFavorite{
+  width: 40px;
+  height: 40px;
+  background-image: url("https://image.flaticon.com/icons/png/512/833/833300.png");
+  background-size: 100%;
+  margin-top: 40px;
 }
 `;
 
-export const ButtonFavRecipe = styled.button`
-padding: 10px;
-margin-top: 30px;
-`;
 
 export default function Card({title, image, ingredients, steps1, steps2, steps3, steps4, steps5}){
-    const [isFavorite, setFavorite] = useState()
+    const [favorite, setFavorite] = useState(false)
 
-    const HandleClick = () =>{
-        setFavorite(!isFavorite);
+    const HandleClickFavorite = () =>{
+        setFavorite(!favorite);
 
     }
 
@@ -65,7 +79,7 @@ export default function Card({title, image, ingredients, steps1, steps2, steps3,
     <StepsRecipe>{steps3}</StepsRecipe>
     <StepsRecipe>{steps4}</StepsRecipe>
     <StepsRecipe>{steps5}</StepsRecipe>
-    <ButtonFavRecipe onClick={HandleClick} class={'isfavorite' ? 'isfavorite' : 'notFavorite'}>add to favorite : ❤️</ButtonFavRecipe >
-    </CardRecipeContainer>
+    <div id="favorite" value={favorite} onClick={HandleClickFavorite} className={favorite ? "isFavorite" : "notFavorite"}></div>
+       </CardRecipeContainer>
 )
 }
