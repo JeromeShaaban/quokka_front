@@ -7,9 +7,9 @@ const BoobaQuotes = () => {
   const [loading, setLoading] = useState(true);
   const clickNewQuote = async () => {
     try {
-      const response = await axios.get("https://api.booba.cloud");
+      const response = await axios.get("http://localhost:5000/keanu/random");
       console.log("response: ", response);
-      setQuote(response.data.quote);
+      setQuote(response.data[0].quote + " - Keanu Reeves");
     } catch (err) {
       console.log(err);
     } finally {
@@ -22,7 +22,7 @@ const BoobaQuotes = () => {
       <div className="BoobaDiv">
         <blockquote className="BoobaQuote" style={{ width: "50%"}}>{quote}</blockquote>
         <button type="button" onClick={clickNewQuote} className="BoobaButton">
-          Need more motivation ? 
+           Another quote
         </button>
       </div>
     )
@@ -30,7 +30,7 @@ const BoobaQuotes = () => {
       <div className="BoobaDiv">
         <blockquote className="BoobaQuote">{quote}</blockquote>
         <button type="button" onClick={clickNewQuote} className="BoobaButton">
-          Need more motivation ? 
+        Need more motivation ?
         </button>
       </div>
     )
