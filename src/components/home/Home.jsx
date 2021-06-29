@@ -1,7 +1,4 @@
 import '../../style/home.scss'
-import {useContext} from 'react'
-import MenuContext from '../../contexts/MenuContext'
-import SlideMenu from '../menu/Menu'
 import homeImg from '../../assets/workers.png'
 import Module from './Module'
 
@@ -19,18 +16,12 @@ const modules = [
   ];
 
 export default function Home () {
-  const { open } = useContext(MenuContext);
   
   return(
-    <div>
-    <SlideMenu/>
-    {!open && (
-      <>
-      
-      
+    <div>   
       
       <div id="home" className="homeContainer">
-        <img src={homeImg}/>
+        <img src={homeImg} alt="Home"/>
         <div >
         <h3>You've been working for hours? <br/> Your back hurts, your eyes burn, <br/> you can't think straight?</h3>
         <h3>Take a break!</h3>
@@ -45,10 +36,7 @@ export default function Home () {
              ))}
            </div>
            </div>
-           </>
-     
-
-    )}  
+           
   </div>
 
   )

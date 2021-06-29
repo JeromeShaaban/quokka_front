@@ -7,9 +7,9 @@ const BoobaQuotes = () => {
   const [loading, setLoading] = useState(true);
   const clickNewQuote = async () => {
     try {
-      const response = await axios.get("https://api.booba.cloud");
+      const response = await axios.get("https://api.kanye.rest/");
       console.log("response: ", response);
-      setQuote(response.data.quote);
+      setQuote(response.data.quote + " - Kayne West");
     } catch (err) {
       console.log(err);
     } finally {
