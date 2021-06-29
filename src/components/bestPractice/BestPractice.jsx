@@ -1,4 +1,3 @@
-import BackgroundStars from '../BackgroundStars'
 import BestPracticeCard from './BestPracticeCard'
 import '../../style/bestPractice.scss'
 import Posture1 from '../../assets/posture1.png'
@@ -66,8 +65,6 @@ export default function BestPractice () {
 
     return(
         <div>
-           <BackgroundStars />
-        <div>
         <h1 class="white">Straigthen up</h1>
         <div class="flexBest">
         {
@@ -106,7 +103,6 @@ export default function BestPractice () {
                     text={stretch.text}/>)
             })
         }
-        </div>
         </div>
     </div>
     )

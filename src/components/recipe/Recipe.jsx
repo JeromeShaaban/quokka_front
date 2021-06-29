@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Card from './Card';
-import BackgroundStars from '../BackgroundStars';
 
 
 export const RecipeWrapper = styled.div`
@@ -65,7 +64,6 @@ export default function Recipe(){
 
     return(
         <div>
-            <BackgroundStars/>
             <TitleRecipePage>A healthy mind in a healthy body</TitleRecipePage>
             <RecipeWrapper>
         {recipes.map((recipe) => {
