@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../../style/youtubeVideo.css";
 
 const YoutubeVideo = ({ embedId }) => (
   <div className="video-responsive">
