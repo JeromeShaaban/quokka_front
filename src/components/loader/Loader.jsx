@@ -5,12 +5,11 @@ import Study from './Study'
 
 const pomodoroTimer = 25
 
-export default function Loader ( ){
-  const [timer, setTimer] = useState(pomodoroTimer)
+export default function Loader ( {counter, setCounter}){
   const [isRest, setIsRest] = useState(false)
 
    const updateTimer = () => {
-    timer > 0 ? setTimer(timer - 1) : setIsRest(true)
+    counter > 0 ? setCounter(counter - 1) : setIsRest(true)
    }
 
   useEffect(() => {
@@ -21,10 +20,10 @@ export default function Loader ( ){
     return () => {
       clearTimeout(timer)
     };
-  }, [timer]);
+  }, [counter]);
 
   return (
   <div className="coffeeContainer">
-    {isRest ? <Rest setIsRest={setIsRest} setTimer={setTimer} pomodoroTimer={pomodoroTimer}/>: <Study /> }
+    {isRest ? <Rest setIsRest={setIsRest} setCounter={setCounter} />: <Study /> }
   </div>)
 }

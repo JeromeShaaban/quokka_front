@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import '../../style/pomodoro.css'
 
-const Pomodoro = () => {
-  const [counter, setCounter] = useState(25);
+const Pomodoro = ({counter, setCounter}) => {
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
   }, [counter]);

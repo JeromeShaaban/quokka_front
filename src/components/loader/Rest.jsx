@@ -1,10 +1,10 @@
 import {useEffect} from 'react';
 import MillImg from '../../assets/coffee_mill.png'
 
-export default function ({setIsRest ,setTimer, pomodoroTimer}) {
+export default function ({setIsRest ,setCounter}) {
   useEffect(() => {
     return () => {
-      setTimer(pomodoroTimer)
+      setCounter(25)
     };
   }, []);
 
