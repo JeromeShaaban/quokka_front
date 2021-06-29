@@ -1,7 +1,7 @@
 import {
   BrowserRouter as Poule,
   Switch as Zen,
-  Route,
+  Route as Quokka,
 } from "react-router-dom";
 import {useContext} from "react";
 import Home from "./components//home/Home";
@@ -27,11 +27,11 @@ export default function QuokkaRouter() {
       <>
       <Header/>
       <Zen>
-        <Route path="/best_practice" component={BestPractice} />
-        <Route path="/pomodoro_music" component={PomodoroMusic} />
-        <Route path="/recipe" component={Recipe} />
-        <Route path="/about_us" component={AboutUs} />
-        <Route exact path="/" component={Home} />
+        <Quokka path="/best_practice" component={BestPractice} />
+        <Quokka path="/pomodoro_music" component={PomodoroMusic} />
+        <Quokka path="/recipe" component={Recipe} />
+        <Quokka path="/about_us" component={AboutUs} />
+        <Quokka exact path="/" component={Home} />
       </Zen>
       <Footer/>
       </>
