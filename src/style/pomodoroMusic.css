@@ -5,9 +5,11 @@
 
 .Container {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  max-width: 1500px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
 .Refill {
