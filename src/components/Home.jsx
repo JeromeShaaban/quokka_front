@@ -9,8 +9,9 @@ export default function Home () {
   const { open } = useContext(MenuContext);
 
   return(
-    
-  <div className="container">
+
+
+  <div className="homeContainer">
     <BackgroundStars/>
     <SlideMenu/>
     {!open && (
