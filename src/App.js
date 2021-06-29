@@ -5,6 +5,7 @@ import MenuContext from './contexts/MenuContext'
 
 function App() {
   const [open, setOpen] = useState(false);
+  
   return (
     <MenuContext.Provider value={{ open: open, setOpen: setOpen}}>
     <div className="App">
