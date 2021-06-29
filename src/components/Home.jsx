@@ -10,7 +10,6 @@ export default function Home () {
 
   return(
 
-    <MenuContext.Provider value={{ open: open, setOpen: setOpen}}>
   <div className="homeContainer">
     <BackgroundStars/>
     <SlideMenu/>
