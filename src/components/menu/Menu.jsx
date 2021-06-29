@@ -115,10 +115,9 @@ const Menu = ({ open }) => {
   )
 }
 
-
-
 export default function SlideMenu () {
   const { open, setOpen } = useContext(MenuContext);
+
   const node = useRef();
   return (
     <div>

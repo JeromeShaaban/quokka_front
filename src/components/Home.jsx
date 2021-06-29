@@ -1,13 +1,15 @@
 import '../style/home.scss'
-import { useState } from 'react'
+import {useContext} from 'react'
+import MenuContext from '../contexts/MenuContext'
 import BackgroundStars from './BackgroundStars'
 import SlideMenu from '../components/menu/Menu'
-import MenuContext from '../contexts/MenuContext'
+
 
 export default function Home () {
-  const [open, setOpen] = useState(false);
+  const { open } = useContext(MenuContext);
 
   return(
+
     <MenuContext.Provider value={{ open: open, setOpen: setOpen}}>
   <div className="homeContainer">
     <BackgroundStars/>
@@ -22,6 +24,6 @@ export default function Home () {
 
     )}  
   </div>
-  </MenuContext.Provider>
+
   )
 }
