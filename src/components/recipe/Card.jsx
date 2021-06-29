@@ -7,7 +7,6 @@ export const StyledImageRecipe = styled.img`
 `;
 
 export const StepsRecipe = styled.p`
- font-family:'Roboto', sans-serif;
  text-align:justify;
  width:30rem;
  color:#fff;
