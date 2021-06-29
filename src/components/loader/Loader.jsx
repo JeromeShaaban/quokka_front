@@ -3,7 +3,7 @@ import '../../style/loader/loader.scss'
 import Rest from './Rest';
 import Study from './Study'
 
-const pomodoroTimer = 10
+const pomodoroTimer = 25
 
 export default function Loader ( ){
   const [timer, setTimer] = useState(pomodoroTimer)
