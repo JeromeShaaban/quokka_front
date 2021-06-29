@@ -1,70 +1,7 @@
 import styled from "styled-components"
-import { useState, useRef } from "react"
+import { useRef, useContext } from "react"
+import MenuContext from '../../contexts/MenuContext'
 
-export const theme = {
-    primaryDark: '#0D0C1D',
-    primaryLight: '#EFFFFA',
-    primaryHover: '#343078',
-    mobile: '576px',
-  }
-
-const StyledMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #EFFFFA;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-  height: 100vh;
-  text-align: left;
-  padding: 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease-in-out;
-
-  @media (max-width: 576px) {
-      width: 100%;
-    }
-
-  a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: #0D0C1D;
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    @media (max-width: 576px) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    &:hover {
-      color: #343078;
-    }
-  }
-`
-
-const Menu = ({ open }) => {
-  return (
-    <StyledMenu open={open}>
-      <a href="/">
-        <span role="img" aria-label="about us">💁🏻‍♂️</span>
-        Work efficiently
-      </a>
-      <a href="/">
-        <span role="img" aria-label="price">💸</span>
-        Relax
-        </a>
-      <a href="/">
-        <span role="img" aria-label="contact">📩</span>
-        Fuel yourself
-        </a>
-    </StyledMenu>
-  )
-}
 
 const StyledBurger = styled.button`
   position: absolute;
@@ -119,9 +56,69 @@ const Burger = ({ open, setOpen }) => {
   )
 }
 
+const StyledMenu = styled.nav`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+
+  @media (max-width: 576px) {
+      width: 100%;
+    }
+
+  a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 2rem 0;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+`
+
+const Menu = ({ open }) => {
+  return (
+    <StyledMenu open={open}>
+      <a href="/pomodoro_music">
+        <span role="img" aria-label="work">🖥️</span>
+        Work
+      </a>
+      <a href="/best_practice">
+        <span role="img" aria-label="relax">🧘🏽</span>
+        Relax
+        </a>
+      <a href="/recipe">
+        <span role="img" aria-label="fuel">🥗</span>
+        Fuel
+        </a>
+    </StyledMenu>
+  )
+}
+
+
 
 export default function SlideMenu () {
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useContext(MenuContext);
   const node = useRef();
   return (
     <div>
