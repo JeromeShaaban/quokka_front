@@ -21,7 +21,7 @@ export default function Home () {
     <div>   
       
       <div id="home" className="homeContainer">
-        <img src={homeImg}/>
+        <img src={homeImg} alt="Home"/>
         <div >
         <h3>You've been working for hours? <br/> Your back hurts, your eyes burn, <br/> you can't think straight?</h3>
         <h3>Take a break!</h3>
