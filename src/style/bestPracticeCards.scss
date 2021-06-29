@@ -1,0 +1,42 @@
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  width: 80%;
+  height: 45%;
+  max-width: 30rem;
+  max-height: 35rem;
+  min-height: 15rem;
+  border-radius: 1.5rem;
+  margin: 1rem
+}
+
+#titleBest{
+ padding: 1rem;
+ margin-bottom: 1rem;
+ text-align: center
+}
+
+#blur{
+  transform-style: preserve-3d;
+  width: 75%;
+  height: 45%;
+  max-width: 30rem;
+  max-height: 35rem;
+  min-height: 15rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  z-index: 2;
+  border-radius: 1.5rem;
+  padding: 29px;
+  backdrop-filter: blur(2px);
+  -webkit-box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.09); 
+  box-shadow: 0px 4px 7px 2px rgba(0,0,0,0.09);
+  margin: 10px;
+  text-align: justify;
+
+}
