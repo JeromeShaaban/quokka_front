@@ -25,7 +25,6 @@ font-size: 4rem;
 `;
 
 export default function Recipe(){
-    const { open } = useContext(MenuContext);
     const recipes = [
         {
            
@@ -66,9 +65,6 @@ export default function Recipe(){
 
 return(
         <div>
-            <SlideMenu/> 
-            {!open && (
-            <> 
 
             <TitleRecipePage>A healthy mind in a healthy body</TitleRecipePage>
             <RecipeWrapper>
@@ -79,9 +75,7 @@ return(
         }
      )
     }
-    
-
-        </RecipeWrapper></>)} 
+            </RecipeWrapper>
     </div>
 
     )
