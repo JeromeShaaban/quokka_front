@@ -4,7 +4,7 @@ import MenuContext from '../../contexts/MenuContext'
 import SlideMenu from '../menu/Menu'
 import homeImg from '../../assets/workers.png'
 import Module from './Module'
-import Footer from "../Footer"
+
 
 const modules = [
   { title : "🖥️ Work ",
@@ -45,7 +45,6 @@ export default function Home () {
              ))}
            </div>
            </div>
-           <Footer/>
            </>
      
 

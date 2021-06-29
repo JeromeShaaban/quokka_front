@@ -10,6 +10,7 @@ import BestPractice from "./components/bestPractice/BestPractice";
 import Header from "./components/header";
 import BackgroundStars from "./components/BackgroundStars";
 import AboutUs from "./components/about_us/AboutUs"
+import Footer from "./components/Footer"
 
 export default function QuokkaRouter() {
   return (
@@ -24,6 +25,7 @@ export default function QuokkaRouter() {
         <Route path="/about_us" component={AboutUs} />
         <Route exact path="/" component={Home} />
       </Zen>
+      <Footer/>
     </Poule>
   );
 }
