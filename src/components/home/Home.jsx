@@ -5,6 +5,7 @@ import SlideMenu from '../menu/Menu'
 import homeImg from '../../assets/workers.png'
 import Module from './Module'
 
+
 const modules = [
   { title : "🖥️ Work ",
   desc :"Help yourself being focused at work and studies. We provide a timer according to the pomodoro method, that allows you to take breaks every 25min to be focused all the day! And bonus : some chill music to be relaxed!",
