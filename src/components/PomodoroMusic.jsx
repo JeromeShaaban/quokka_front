@@ -2,7 +2,8 @@ import React, { useState, useContext } from 'react';
 
 import MusicPlayer from "./music_player/MusicPlayer"
 import Loader from './loader/Loader';
-import Pomodoro from './pomodoro/pomodoro';
+import Pomodoro from './pomodoro/Pomodoro';
+import BoobaQuotes from './pomodoro/BoobaQuotes';
 import '../style/pomodoroMusic.css'
 import SlideMenu from '../components/menu/Menu'
 import MenuContext from "../contexts/MenuContext"
@@ -16,12 +17,20 @@ const PomodoroMusic = () => {
       <SlideMenu/>
       {!open && ( 
         <>
-      <div className="Container">
-        <Pomodoro counter={counter} setCounter={setCounter}/>
-        <Loader counter={counter} setCounter={setCounter} />
-      </div>
-      <MusicPlayer />
-      </>
+          <div className="pomodoroBg">
+            <h2>Pomodoro</h2>
+            <p>Take a break every 25min to stay focused</p>
+            <p>An empty cup of coffee needs to be reffiled !</p>
+            <div className="PomodoroContainer">
+              <Pomodoro counter={counter} setCounter={setCounter}/>
+              <Loader counter={counter} setCounter={setCounter} />
+            </div>
+          </div>
+          <div className="pomodoroBg">
+            <MusicPlayer />
+          </div>
+          <BoobaQuotes />
+        </>
       )}
     </div>
   );
