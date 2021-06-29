@@ -1,8 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+.Logo {
+  width: 5%;
+  height: 5%;
+}
 
-#title {
-  font-size: 7rem;
-  font-family: 'Permanent Marker', cursive;
-  color: white;
-  z-index: 2;
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.Refill {
+  color: whitesmoke;
 }

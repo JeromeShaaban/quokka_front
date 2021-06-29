@@ -30,9 +30,9 @@ export default function Recipe(){
            
             title:'Salmon pie',
             image:'https://cdn.pixabay.com/photo/2020/03/03/16/18/tarte-flambee-4899104_960_720.jpg',
-            ingredients:'1 flamenkuche paste(or a pizza paste),200g White cheese 0%, 5tbsp. fresh cream, 200g sliced ​​onions, 150g smoked salmon, freshly ground pepper ',
+            ingredients:'1 flamenkuche paste(or a pizza paste),200g cottage cheese 0%, 5tbsp. fresh cream, 200g sliced ​​onions, 150g smoked salmon, freshly ground pepper ',
             steps1:" 1. 🔪 🐟 Cut the salmon into strips",
-            steps2:'2. 🥣 In a bowl, combine the white cheese, sour cream and pepper.',
+            steps2:'2. 🥣 In a bowl, combine the cottage cheese, sour cream and pepper.',
             steps3:'3. 🫓 Spread the dough on a baking sheet. Spread the cream mixture on top and distribute the onions and the slices of salmon.',
             steps4: '4. ✨ Bake at 220 ° C for 15 minutes',
             isfavorite:'false'
