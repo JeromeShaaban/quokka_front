@@ -16,14 +16,21 @@ const PomodoroMusic = () => {
     <div>
       <SlideMenu/>
       {!open && ( 
-      <>
-        <div className="Container">
-          <Pomodoro counter={counter} setCounter={setCounter}/>
-          <Loader counter={counter} setCounter={setCounter} />
-        </div>
-        <MusicPlayer />
-        <BoobaQuotes />
-      </>
+        <>
+          <div className="pomodoroBg">
+            <h2>Pomodoro</h2>
+            <p>Take a break every 25min to stay focused</p>
+            <p>An empty cup of coffee needs to be reffiled !</p>
+            <div className="PomodoroContainer">
+              <Pomodoro counter={counter} setCounter={setCounter}/>
+              <Loader counter={counter} setCounter={setCounter} />
+            </div>
+          </div>
+          <div className="pomodoroBg">
+            <MusicPlayer />
+          </div>
+          <BoobaQuotes />
+        </>
       )}
     </div>
   );
