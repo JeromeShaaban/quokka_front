@@ -1,0 +1,30 @@
+import React, { useState } from 'react';
+import axios from "axios";
+import '../../style/boobaQuotes.scss'
+
+const BoobaQuotes = () => {
+  const [quote, setQuote] = useState("");
+  const [loading, setLoading] = useState(true);
+  const clickNewQuote = async () => {
+    try {
+      const response = await axios.get("https://api.booba.cloud");
+      console.log("response: ", response);
+      setQuote(response.data.quote);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+  return (
+    <div className="BoobaDiv">
+      <blockquote className="BoobaQuote">{quote}</blockquote>
+      <button type="button" onClick={clickNewQuote} className="BoobaButton">
+        Need more motivation ? 
+      </button>
+    </div>
+  );
+};
+
+export default BoobaQuotes;

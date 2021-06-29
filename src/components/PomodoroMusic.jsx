@@ -4,7 +4,8 @@ import BackgroundStars from './BackgroundStars';
 import logo from '../assets/25minwhite.png';
 import MusicPlayer from "./music_player/MusicPlayer"
 import Loader from './loader/Loader';
-import Pomodoro from './pomodoro/pomodoro';
+import Pomodoro from './pomodoro/Pomodoro';
+import BoobaQuotes from './pomodoro/BoobaQuotes';
 import '../style/pomodoroMusic.css'
 
 const PomodoroMusic = () => {
@@ -19,6 +20,7 @@ const PomodoroMusic = () => {
         <Pomodoro counter={counter} setCounter={setCounter}/>
         <Loader counter={counter} setCounter={setCounter} />
       </div>
+      <BoobaQuotes />
     </div>
   );
 };
