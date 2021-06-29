@@ -10,11 +10,11 @@ const PomodoroMusic = () => {
 
   return (
     <div>
-      <MusicPlayer />
       <div className="Container">
         <Pomodoro counter={counter} setCounter={setCounter}/>
         <Loader counter={counter} setCounter={setCounter} />
       </div>
+      <MusicPlayer />
     </div>
   );
 };
