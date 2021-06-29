@@ -1,4 +1,3 @@
-import BackgroundStars from '../BackgroundStars'
 import BestPracticeCard from './BestPracticeCard'
 import '../../style/bestPractice.scss'
 import Posture1 from '../../assets/posture1.png'
@@ -74,7 +73,6 @@ export default function BestPractice () {
 
     return(
         <div>
-           <BackgroundStars />
            <SlideMenu />
            {!open && (
            

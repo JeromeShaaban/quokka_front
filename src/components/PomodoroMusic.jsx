@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
-import BackgroundStars from './BackgroundStars';
-import logo from '../assets/25minwhite.png';
+
 import MusicPlayer from "./music_player/MusicPlayer"
 import Loader from './loader/Loader';
 import Pomodoro from './pomodoro/Pomodoro';
@@ -15,18 +14,15 @@ const PomodoroMusic = () => {
 
   return (
     <div>
-      <BackgroundStars />
-
       <SlideMenu/>
       {!open && ( 
-        <>
-      <img src={logo} alt="logo" className="Logo"/>
-      <MusicPlayer />
-      <div className="Container">
-        <Pomodoro counter={counter} setCounter={setCounter}/>
-        <Loader counter={counter} setCounter={setCounter} />
-      </div>
-      <BoobaQuotes />
+      <>
+        <div className="Container">
+          <Pomodoro counter={counter} setCounter={setCounter}/>
+          <Loader counter={counter} setCounter={setCounter} />
+        </div>
+        <MusicPlayer />
+        <BoobaQuotes />
       </>
       )}
     </div>

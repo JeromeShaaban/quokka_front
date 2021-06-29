@@ -16,14 +16,24 @@ const BoobaQuotes = () => {
       setLoading(false);
     }
   };
-  
+  console.log("loading: ", loading)
   return (
-    <div className="BoobaDiv">
-      <blockquote className="BoobaQuote">{quote}</blockquote>
-      <button type="button" onClick={clickNewQuote} className="BoobaButton">
-        Need more motivation ? 
-      </button>
-    </div>
+    !loading ? (
+      <div className="BoobaDiv">
+        <blockquote className="BoobaQuote" style={{ width: "50%"}}>{quote}</blockquote>
+        <button type="button" onClick={clickNewQuote} className="BoobaButton">
+          Need more motivation ? 
+        </button>
+      </div>
+    )
+    :(
+      <div className="BoobaDiv">
+        <blockquote className="BoobaQuote" style={{ width: "50%"}}>{quote}</blockquote>
+        <button type="button" onClick={clickNewQuote} className="BoobaButton">
+          Need more motivation ? 
+        </button>
+      </div>
+    )
   );
 };
 

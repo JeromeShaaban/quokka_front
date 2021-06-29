@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { useContext } from 'react';
 import MenuContext from '../../contexts/MenuContext';
 import Card from './Card';
-import BackgroundStars from '../BackgroundStars';
 import SlideMenu from '../menu/Menu'
 
 export const RecipeWrapper = styled.div`
@@ -67,7 +66,6 @@ export default function Recipe(){
 
 return(
         <div>
-         <BackgroundStars/>
             <SlideMenu/> 
             {!open && (
             <> 
