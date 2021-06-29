@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../../style/youtubeVideo.css";
 
 const YoutubeVideo = ({ embedId }) => (
-  <div className="video-responsive">
+ <div className="video-responsive">
     <iframe
       width="853"
       height="480"
@@ -12,7 +13,7 @@ const YoutubeVideo = ({ embedId }) => (
       frameBorder="0"
       title="Relaxation music"
     ></iframe>
-  </div>
+ </div>
 );
 
 YoutubeVideo.propTypes = {
