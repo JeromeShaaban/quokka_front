@@ -1,0 +1,40 @@
+.site-footer
+{
+  padding:20px 0 30px;
+  font-size:18px;
+  line-height:24px;
+  color:white;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.shrink
+{
+    display: flex;
+    margin: auto;
+  max-width: 80em;
+}
+
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+
+.hackathon_text
+{
+  margin:0;
+  padding: 1em;
+
+}
+.footer_text
+{
+  color: white;
+  margin: 0.5em;
+}
