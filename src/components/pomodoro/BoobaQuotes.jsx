@@ -7,7 +7,7 @@ const BoobaQuotes = () => {
   const [loading, setLoading] = useState(true);
   const clickNewQuote = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/keanu/random");
+      const response = await axios.get("https://twenty-five.herokuapp.com/keanu/random");
       console.log("response: ", response);
       setQuote(response.data[0].quote + " - Keanu Reeves");
     } catch (err) {
