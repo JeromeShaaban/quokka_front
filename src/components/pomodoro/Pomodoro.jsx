@@ -4,7 +4,7 @@ import '../../style/pomodoro.css'
 const Pomodoro = ({counter, setCounter}) => {
   useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-  }, [counter]);
+  }, [counter, setCounter]);
   return (
     <div className="Counter">
       <p>{counter >= 20 && "The noblest pleasure is the joy of understanding. -- Leonardo da Vinci"}</p>

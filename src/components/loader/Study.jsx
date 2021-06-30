@@ -1,14 +1,14 @@
 import coffeeImg from '../../assets/coffee.png'
 import vaporImg from '../../assets/vapor.png'
 
-export default function () {
+export default function Study() {
 
 return(
   <div id="coffee">
-    <img src={vaporImg} id="vapor"></img>
+    <img src={vaporImg} alt="vapor" id="vapor"></img>
     <div>
       <div className="water"/>
-      <img src={coffeeImg} id="maskHover"/>
+      <img src={coffeeImg} alt="coffee" id="maskHover"/>
     </div>
   </div>)
   

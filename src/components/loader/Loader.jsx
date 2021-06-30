@@ -3,7 +3,7 @@ import '../../style/loader/loader.scss'
 import Rest from './Rest';
 import Study from './Study'
 
-const pomodoroTimer = 25
+// const pomodoroTimer = 25
 
 export default function Loader ( {counter, setCounter}){
   const [isRest, setIsRest] = useState(false)
@@ -20,7 +20,7 @@ export default function Loader ( {counter, setCounter}){
     return () => {
       clearTimeout(timer)
     };
-  }, [counter]);
+  }, [counter, updateTimer]);
 
   return (
   <div className="coffeeContainer">
