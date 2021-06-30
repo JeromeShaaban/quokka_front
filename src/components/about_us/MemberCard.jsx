@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-import { Icon } from 'semantic-ui-react';
+import icon from "../../assets/linkedin_icon.png"
 
 export const CardMemberContainer = styled.div `
   color: white;
@@ -19,12 +19,14 @@ height: 300px;
 `
 
 export const MemberName = styled.h1 `
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
 `;
 
-export const LinkedIn = styled.div `
-  color: white;
+export const LinkedIn = styled.img `
+  width: 20px;
+  height: 20px;
+  margin-top: 1rem;
 `;
 
 
@@ -32,11 +34,9 @@ export const LinkedIn = styled.div `
 const MemberCard = ({photo, firstname, github, linkedin}) => {
   return (
     <CardMemberContainer>
-      <a href={github} target="_blank" rel="noreferrer" title="Go to my GitHub !"><MemberPhoto src={photo} /></a>
+      <a href={github} target="_blank" title="Go see my GitHub !"><MemberPhoto src={photo} /></a>
       <MemberName>{firstname}</MemberName>
-      <a href={linkedin} target="_blank" rel="noreferrer" title="Here is my Linkedin !"><LinkedIn>
-        <Icon name="linkedin" size="big"/>
-      </LinkedIn></a>
+      <a href={linkedin} target="_blank" title="Contact me on Linkedin !"><LinkedIn src={icon}/></a>
     </CardMemberContainer>
   );
 };
