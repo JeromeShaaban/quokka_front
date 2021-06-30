@@ -51,7 +51,9 @@ export default function AboutUs() {
           display: "flex", 
           flexFlow: "row wrap", 
           justifyContent: "space-evenly", 
-          alignItems: "center"
+          alignItems: "center",
+          marginTop: "3rem",
+          marginBottom: "1rem",
         }}>
           {members.map((member) => {
             return(
