@@ -3,7 +3,7 @@ import Card from './Card';
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify';
-import { FormControl, InputLabel, Input} from '@material-ui/core';
+import { FormControl, Input} from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 
 export const RecipeWrapper = styled.div`
@@ -25,6 +25,8 @@ font-size: 4rem;
 
 `;
 
+
+
 export const Form = styled.form`
 margin:0;
 background-color:#ffffff1c;
@@ -34,7 +36,12 @@ margin-right: auto;
 width: 16em;
 font-size: 4rem;
 border-radius:5px;
+color:#ffffff;
+`;
 
+export const InputLabel = styled.label`
+color:#fff;
+font-size:1rem;
 `;
 
 export default function Recipe(){
@@ -175,6 +182,7 @@ export default function Recipe(){
                 aria-describedby="my-helper-text"
               />
             </FormControl>
+            <div>
             <Button
               disabled={loading}
               type="submit"
@@ -184,6 +192,7 @@ export default function Recipe(){
             >
               Submit
             </Button>
+            </div>
             </Form>
 
 
