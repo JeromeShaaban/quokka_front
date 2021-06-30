@@ -34,9 +34,9 @@ export const LinkedIn = styled.img `
 const MemberCard = ({photo, firstname, github, linkedin}) => {
   return (
     <CardMemberContainer>
-      <a href={github} target="_blank" title="Go see my GitHub !"><MemberPhoto src={photo} /></a>
+      <a href={github} target="_blank" rel="noreferrer" title="Go see my GitHub !"><MemberPhoto src={photo} /></a>
       <MemberName>{firstname}</MemberName>
-      <a href={linkedin} target="_blank" title="Contact me on Linkedin !"><LinkedIn src={icon}/></a>
+      <a href={linkedin} target="_blank" rel="noreferrer" title="Contact me on Linkedin !"><LinkedIn src={icon}/></a>
     </CardMemberContainer>
   );
 };
