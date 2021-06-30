@@ -1,9 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
 .Counter {
   padding-top: 5rem;
   color: white;
-  font-family: 'Permanent Marker', cursive;
-  font-size: 2rem;
+
   max-width: 500px;
+}
+
+#size1{
+  font-size: 2.5rem;
+}
+
+#size2{
+  font-size: 2.5rem;
+}
+#size3{
+  font-size: 2.5rem;
+}
+#size4{
+  font-size: 2.5rem;
+}
+#size5{
+  font-size: 2.5rem;
+}
+#size6{
+  font-size: 3.5rem;
 }

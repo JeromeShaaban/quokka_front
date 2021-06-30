@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import QuokkaRouter from "./Router";
 import './App.css';
-import MenuContext from './contexts/MenuContext'
+import MenuContext from './contexts/MenuContext';
+
 
 function App() {
   const [open, setOpen] = useState(false);
