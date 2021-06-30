@@ -22,7 +22,6 @@ margin-left: auto;
 margin-right: auto;
 width: 16em;
 font-size: 4rem;
-
 `;
 
 
