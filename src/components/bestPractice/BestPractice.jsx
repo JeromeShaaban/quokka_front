@@ -70,21 +70,22 @@ export default function BestPractice () {
         ]
 
     return(
-        <div>           
+        <div>  
            <div>
-           
-        <h1 class="white">Straigthen up</h1>
+        <h1 class="white">Stretch</h1>
         <div class="flexBest">
         {
-            Straigthen.map((straight, index) => {
+            Stretch.map((stretch, index) => {
                 return (
                 <BestPracticeCard 
                     index={index}
-                    image={straight.image}
-                    title={straight.title}
-                    text={straight.text}/>)
+                    image={stretch.image}
+                    title={stretch.title}
+                    text={stretch.text}/>)
             })
         }
+        </div>   
+
        </div>
         <h1 class="white">Breathe</h1>
         <div class="flexBest">
@@ -99,19 +100,18 @@ export default function BestPractice () {
             })
         }
         </div>
-        <h1 class="white">Stretch</h1>
+        <h1 class="white">Straigthen up</h1>
         <div class="flexBest">
         {
-            Stretch.map((stretch, index) => {
+            Straigthen.map((straight, index) => {
                 return (
                 <BestPracticeCard 
                     index={index}
-                    image={stretch.image}
-                    title={stretch.title}
-                    text={stretch.text}/>)
+                    image={straight.image}
+                    title={straight.title}
+                    text={straight.text}/>)
             })
         }
-        </div>
         </div>        
     </div>
     )
