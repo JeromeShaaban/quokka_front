@@ -32,9 +32,9 @@ export const LinkedIn = styled.div `
 const MemberCard = ({photo, firstname, github, linkedin}) => {
   return (
     <CardMemberContainer>
-      <a href={github} target="_blank" title="Go to my GitHub !"><MemberPhoto src={photo} /></a>
+      <a href={github} target="_blank" rel="noreferrer" title="Go to my GitHub !"><MemberPhoto src={photo} /></a>
       <MemberName>{firstname}</MemberName>
-      <a href={linkedin} target="_blank" title="Here is my Linkedin !"><LinkedIn>
+      <a href={linkedin} target="_blank" rel="noreferrer" title="Here is my Linkedin !"><LinkedIn>
         <Icon name="linkedin" size="big"/>
       </LinkedIn></a>
     </CardMemberContainer>
