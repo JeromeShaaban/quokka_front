@@ -24,6 +24,7 @@
     display : inline-block;
     margin: 0 auto 5px ;
     padding-top: 8px;
+    transition: background-color .2s;
 
     &:hover{
       background: rgba($color: white, $alpha: .5);

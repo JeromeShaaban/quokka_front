@@ -27,11 +27,13 @@ export default function QuokkaRouter() {
       <>
       <Header/>
       <Zen>
-        <Quokka path="/best_practice" component={BestPractice} />
-        <Quokka path="/pomodoro_music" component={PomodoroMusic} />
-        <Quokka path="/recipe" component={Recipe} />
-        <Quokka path="/about_us" component={AboutUs} />
-        <Quokka exact path="/" component={Home} />
+        <div className="ContentWrapper">
+         <Quokka path="/best_practice" component={BestPractice} />
+          <Quokka path="/pomodoro_music" component={PomodoroMusic} />
+          <Quokka path="/recipe" component={Recipe} />
+          <Quokka path="/about_us" component={AboutUs} />
+          <Quokka exact path="/" component={Home} />
+        </div>
       </Zen>
       <Footer/>
       </>
