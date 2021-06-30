@@ -37,7 +37,7 @@ export default function BestPractice () {
         [
              {   image: Meditation1,
                  title: "Bring attention to your body",
-                 text: "Start by sitting comfortably and closing your eyes. Relax your shoulders, and place your hands on your lap. Take a few deep breaths, and allow your body to relax with each exhale. Start rotating your awareness within your body starting with your toes, and begin to imagine a wave of relaxation moving slowly up your legs all the way to the hips. Then, bring your awareness to your fingers, and imagine a wave of relaxation moving up through your hands all the way to your shoulders. Allow your belly to relax, and feel your breath moving your chest and stomach. Relax your back muscles, your neck muscles, and your head. Finally, let go of any tension in your facial muscles and jaw. Observe your body, and move the wave of relaxation where it’s mostly needed. Continue for 5 to 10 minutes before resuming your tasks."
+                 text: "Start by sitting comfortably and closing your eyes. Relax your shoulders, and place your hands on your lap. Take a few deep breaths, and allow your body to relax with each exhale. Start rotating your awareness within your body starting with your toes, and begin to imagine a wave of relaxation moving slowly up your legs all the way to the hips. Then, bring your awareness to your fingers, and imagine a wave of relaxation moving up through your hands all the way to your shoulders. Allow your belly to relax, and feel your breath moving your chest and stomach. Relax your back muscles, your neck muscles, and your head."
              },
              {  
                  image: Meditation2,
@@ -47,7 +47,7 @@ export default function BestPractice () {
              {  
                 image: Meditation3,
                 title: "Change the feeling of stress",
-                text: "The next time you feel stressed or uncomfortable because you are too busy, stop and try to identify where in your body this stress is located. Do you feel it in your head, throat, chest, or belly? Close your eyes, and fully bring your awareness to this feeling. Does it have a movement, a distinct shape, a color? Does it feel hot or cold? Does it have a smell? Then, try to change these variables one by one. Try to change the shape into something nicer. Try to change the color, movement, or even location of the feeling. Once you identify the feeling as a separate entity within you, you can play with it more freely. This practice of control over how you feel stress will be beneficial."
+                text: "The next time you feel stressed or uncomfortable because you are too busy, stop and try to identify where in your body this stress is located. Do you feel it in your head, throat, chest, or belly? Close your eyes, and fully bring your awareness to this feeling. Does it have a movement, a distinct shape, a color? Does it feel hot or cold? Does it have a smell? Then, try to change these variables one by one. Try to change the shape into something nicer. Try to change the color, movement, or even location of the feeling. Once you identify the feeling as a separate entity within you, you can play with it more freely."
             }    
         ]
 
@@ -70,21 +70,22 @@ export default function BestPractice () {
         ]
 
     return(
-        <div>           
+        <div>  
            <div>
-           
-        <h1 class="white">Straigthen up</h1>
+        <h1 class="white">Stretch</h1>
         <div class="flexBest">
         {
-            Straigthen.map((straight, index) => {
+            Stretch.map((stretch, index) => {
                 return (
                 <BestPracticeCard 
                     index={index}
-                    image={straight.image}
-                    title={straight.title}
-                    text={straight.text}/>)
+                    image={stretch.image}
+                    title={stretch.title}
+                    text={stretch.text}/>)
             })
         }
+        </div>   
+
        </div>
         <h1 class="white">Breathe</h1>
         <div class="flexBest">
@@ -99,19 +100,18 @@ export default function BestPractice () {
             })
         }
         </div>
-        <h1 class="white">Stretch</h1>
+        <h1 class="white">Straigthen up</h1>
         <div class="flexBest">
         {
-            Stretch.map((stretch, index) => {
+            Straigthen.map((straight, index) => {
                 return (
                 <BestPracticeCard 
                     index={index}
-                    image={stretch.image}
-                    title={stretch.title}
-                    text={stretch.text}/>)
+                    image={straight.image}
+                    title={straight.title}
+                    text={straight.text}/>)
             })
         }
-        </div>
         </div>        
     </div>
     )
