@@ -29,7 +29,7 @@ $unfill-duration: 25s;
     font-size: 40px;
     color: white;
     cursor: pointer;
-    transition: background-color .3s;
+    transition: background-color .2s;
     &:hover{
       background: rgba($color: white, $alpha: .3);
     }

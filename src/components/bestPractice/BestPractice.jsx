@@ -9,12 +9,10 @@ import Meditation3 from '../../assets/meditation3.jpg'
 import Hamstring from '../../assets/hamstring.gif'
 import Shoulder from '../../assets/shoulder.gif'
 import Lower from '../../assets/lower.gif'
-import {useContext} from 'react'
-import MenuContext from '../../contexts/MenuContext'
-import SlideMenu from '../../components/menu/Menu'
+
 
 export default function BestPractice () {
-    const { open } = useContext(MenuContext);
+
 
     const Straigthen = 
         [
@@ -72,10 +70,7 @@ export default function BestPractice () {
         ]
 
     return(
-        <div>
-           <SlideMenu />
-           {!open && (
-           
+        <div>           
            <div>
            
         <h1 class="white">Straigthen up</h1>
@@ -117,11 +112,7 @@ export default function BestPractice () {
             })
         }
         </div>
-        </div>
-           
-           
-           )}
-        
+        </div>        
     </div>
     )
   }
