@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import QuokkaRouter from "./Router";
 import './App.css';
 import MenuContext from './contexts/MenuContext';
-import 'semantic-ui-css/semantic.min.css';
+
 
 function App() {
   const [open, setOpen] = useState(false);
