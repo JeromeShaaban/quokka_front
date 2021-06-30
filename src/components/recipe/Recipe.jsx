@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import Card from './Card';
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { toast } from 'react-toastify';
 
 export const RecipeWrapper = styled.div`
 display:flex;
@@ -22,6 +25,91 @@ font-size: 4rem;
 `;
 
 export default function Recipe(){
+
+
+    function Recipe() {
+        const [recipes, setRecipes] = useState([])
+        const [error, setError] = useState(null)
+        const [loading, setLoading] = useState(true)
+        const [datas, setDatas] = useState({  title:'Greek salad', image:'', ingredients:"", steps1:'', steps2:'', steps3:"",steps4:"",
+        steps5:"", isfavorite:'false', name: '', price: ''})
+
+        useEffect(() => {
+            const getRecipes= async () => {
+              try {
+                const courses = await axios.get('https://twenty-five.herokuapp.com/')
+                setRecipes(recipes.data)
+              } catch(err) {
+                setError(err)
+              } finally {
+                setLoading(false)
+              }
+            }
+            getRecipes()
+          }, [])
+        
+          if(loading) return <div>loading...</div>
+
+          const handleSubmit = async (e) => {
+            e.preventDefault()
+        
+            try {
+              setLoading(true)
+              await axios.post(
+                'https://twenty-five.herokuapp.com/',
+                {...datas}
+              )
+              toast.success('La recette à bien été rajouté !')
+              } catch(err) {
+                console.log(err);
+                toast.error(`${err.message}`)
+              } finally {
+                setLoading(false)
+              }
+          }
+
+
+          const onChangeDatas = (e) => {
+            setDatas({
+              ...datas,
+              [e.target.name] : e.target.value
+            })
+          }
+
+          return(
+              <>
+            <div>
+    
+                <TitleRecipePage>A healthy mind in a healthy body</TitleRecipePage>
+                <RecipeWrapper>
+            {recipes.map((recipe) => {
+                return(
+                <Card {...recipe}/>
+                )
+            }
+         )
+        }
+                </RecipeWrapper>
+        </div>
+            <form onSubmit={handleSubmit}>
+                
+            </form>
+
+
+
+
+            
+        </>
+
+        )   
+
+
+        }
+
+
+       
+/*
+
     const recipes = [
         {
            
@@ -60,7 +148,7 @@ export default function Recipe(){
         },
     ]
 
-return(
+    return(
         <div>
 
             <TitleRecipePage>A healthy mind in a healthy body</TitleRecipePage>
@@ -75,5 +163,5 @@ return(
             </RecipeWrapper>
     </div>
 
-    )
+    ) */
 }
