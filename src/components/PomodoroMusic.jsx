@@ -18,7 +18,7 @@ const PomodoroMusic = () => {
       {!open && ( 
         <>
           <div className="pomodoroBg">
-            <h2>Pomodoro</h2>
+            <h1>Pomodoro</h1>
             <p>Take a break every 25min to stay focused</p>
             <p>An empty cup of coffee needs to be reffiled !</p>
             <div className="PomodoroContainer">

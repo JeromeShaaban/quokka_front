@@ -5,6 +5,23 @@
   font-family: 'Mirza', cursive;
 }
 
+.App h1{
+  font-size: 2.5rem;
+}
+
+.App h2{
+  font-size: 2rem;
+}
+
+.App h4{
+  font-size: 1.3rem;
+}
+
+.App p{
+  font-size: 1.2rem;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
